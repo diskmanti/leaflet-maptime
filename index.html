@@ -7,9 +7,12 @@
   <title>Big</title>
   <link href='big.css' rel='stylesheet' type='text/css' />
   <link href='highlight.css' rel='stylesheet' type='text/css' />
+
+  <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="bulma.min.css">
   <style>
     .new-shiny {
-      background: #aaaaaa;
+      background-color: #aaaaaa;
     }
 
     .nobreak {
@@ -32,6 +35,19 @@
       -webkit-animation-duration: 1000ms;
     }
 
+    @keyframes color-changer {
+      100% {
+        background-color: black
+      }
+    }
+
+    .color-change {
+      -webkit-animation-name: color-changer;
+      -webkit-animation-delay: 10s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-duration: 2s;
+    }
+
     pre {
       margin: 0;
       padding: 0.2em;
@@ -46,12 +62,16 @@
     }
 
 
-    .dark green {
-      color: #54ec1c;
+    .dark-green-background {
+      background-color: #438245;
     }
 
     .black-background {
       background-color: black
+    }
+
+    .darkorchid-background {
+      background-color: #824380;
     }
   </style>
   <script src='big.js'></script>
@@ -62,7 +82,7 @@
 <body class='dark'>
   <div>Mireseerdhet Maptime-rs &#128518;
     <br> @
-    <br> &#x1F5FA; &#128341;  </div>
+    <br> &#x1F5FA; &#128341; </div>
   <div>Amanti Lulo
     <br>
     <div class="nobreak">
@@ -70,34 +90,62 @@
     </div>
   </div>
   <div>Me
-    <em>pyesni</em> kur te deshironi</div>
-  <div>How to build...
+    <em>pyesni</em> kur te
+    <em>deshironi</em>
+  </div>
+  <div>Si te ndertojme...
     <br>
-    <em class="nobreak">a web map?!</em>
+    <em class="nobreak">nje web map?! &#x1F914;</em>
     <br>
   </div>
   <div>
-    <ul>Data - OSM</ul>
-    <ul>DB - PostGIS</ul>
-    <ul>Server - GeoServer</ul>
-    <ul>?? Po pastaj ??</ul>
+    <ul class="animated fadeIn" style="animation-delay: 1s">Data - OSM</ul>
+    <ul class="animated fadeIn" style="animation-delay: 3s">DB - PostGIS</ul>
+    <ul class="animated fadeIn" style="animation-delay: 5s">Server - GeoServer</ul>
+    <ul class="animated jackInTheBox dark-green-background" style="animation-delay: 7s">?? Po pastaj ??</ul>
   </div>
   <div>Enter
-    <div class="blink black-background">
-      <em>Leaflet JS</em>
-    </div>
+    <em class="blink black-background">Leaflet JS</em>
     <br>
-    <div class="nobreak" style="font-size: 56px">Cfare eshte leafletjs?</div>
+    <div class="nobreak animated jackInTheBox" style=" animation-delay: 5s">Cfare eshte leafletjs?</div>
   </div>
   <div>
-    <div style="font-size: 60px">Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps.</div>
+    Leaflet is the
+    <pre class="color-change">leading</pre> open-source JavaScript library for
+    <pre class="color-change">mobile-friendly interactive</pre>maps.
+    <br>
     <br>
     <div>
-      <a href="http://leafletjs.com" target="_blank">Made with &#x1F499; by Vladimir Agafonkin </a>
+      <a href="http://leafletjs.com" target="_blank">Made with &#x1F499; by Vladimir Agafonkin / Mapbox</a>
     </div>
     <br>
   </div>
-  <div><a href="">Placeholer</a></div>
+  <div class="columns">
+    <div class="column">
+      <strong class="dark-green-background"> Pros </strong>
+      <br>
+      <ul style="list-style-type:circle">
+        <li>noob friendly</li>
+        <li>minimalistic</li>
+        <li>mobile friendly</li>
+        <li>shume plugins</li>
+        <li>great docs</li>
+      </ul>
+
+    </div>
+    <div class="column">
+      <strong class="darkorchid-background">Cons</strong>
+      <br>
+      <ul style="list-style-type:circle">
+        <li>lacks controllers</li>
+        <li>not standart compliant</li>
+        <li>too much plugins</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <a href="https://github.com/diskmanti/leaflet-maptime" target="_blank">Quickstart</a>
+  </div>
 </body>
 
 </html>
